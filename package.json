@@ -1,0 +1,39 @@
+{
+  "name": "karma-msw-test",
+  "version": "0.0.0",
+  "description": "Karma and MSW integration test",
+  "main": "foo.spec.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/karma start karma.conf.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffrose/karma-msw-test.git"
+  },
+  "keywords": [
+    "karma",
+    "msw"
+  ],
+  "author": "Jeff Rose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffrose/karma-msw-test/issues"
+  },
+  "homepage": "https://github.com/jeffrose/karma-msw-test#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "karma": "^5.2.3",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-mocha": "^2.0.1",
+    "karma-mocha-reporter": "^2.0.4",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^8.2.1",
+    "msw": "^0.21.3",
+    "webpack": "^4.44.2"
+  }
+}
