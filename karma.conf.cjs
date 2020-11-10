@@ -1,34 +1,34 @@
 // Karma configuration
-'use strict'
+"use strict";
 
 module.exports = function (config) {
-
   config.set({
-
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: "",
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: [ 'mocha', 'chai' ],
+    frameworks: ["mocha", "chai"],
 
     // list of files / patterns to load in the browser
-    files: [
-      '*.js'
-    ],
+    files: ["*.js"],
+    
+    proxies: {
+      "/mockServiceWorker.js": "/base/mockServiceWorker.js",
+    },
 
     // list of files to exclude
     exclude: [],
-
+    
     preprocessors: {
-      '*.js': [ 'webpack' ]
+      "*.js": ["webpack"],
     },
 
     webpack: {
-      mode: 'development'
+      mode: "development",
     },
 
-    reporters: [ 'mocha' ],
+    reporters: ["mocha"],
 
     // web server port
     port: 9876,
@@ -43,14 +43,14 @@ module.exports = function (config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
-    browsers: [ 'ChromeHeadless' ],
+    browsers: ["Chrome"],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    // singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
-  })
-}
+    concurrency: Infinity,
+  });
+};
