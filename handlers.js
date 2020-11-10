@@ -1,6 +1,8 @@
 // handlers.js
-const { rest } = require( 'msw' );
+const { rest } = require("msw");
 
 export const handlers = [
-    rest.get( '/foo', async ( response, request, context ) => response( context.text( 'foo' ) ) )
+  rest.get("/foo", async (request, response, context) =>
+    response(context.text("foo"))
+  ),
 ];
